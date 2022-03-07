@@ -1,19 +1,43 @@
 const btn = document.getElementById("boton");
 
 btn.addEventListener("click", function () {
-  const compra = document.getElementById("valor").value;
-  let descuento_10 = compra * 0.1;
-  let valor_con_descuento = 150000;
-  let compra_total = compra - descuento_10;
+  let costo = 820000;
+  const cantidad = document.getElementById("valor").value;
+  const compra = costo * cantidad;
+  let descuento_15 = compra * 0.15;
+  let descuento_25 = compra * 0.25;
+  let descuento_35 = compra * 0.35;
 
-  if (compra >= valor_con_descuento) {
+  if (compra >= 1640000 && compra <= 3280000) {
     const desc = document.createElement("h1");
     const total = document.createElement("h1");
-    desc.innerHTML = `Para la compra de: $ ${compra}, tiene descuento del 10%:  $ ${descuento_10}`;
+    desc.innerHTML = `Para la compra de: $ ${compra}, tiene descuento del 15%:  $ ${descuento_15}`;
     desc.setAttribute("style", "background-color:green;");
     document.getElementById("descuento").appendChild(desc);
-
-    total.innerHTML = `Valor de la compra con descuento es: $ ${compra_total}`;
+    total.innerHTML = `Valor de la compra con descuento es: $ ${
+      compra - descuento_15
+    }`;
+    total.setAttribute("style", "background-color:green;");
+    document.getElementById("total").appendChild(total);
+  } else if (compra >= 3280000 && compra <= 6560000) {
+    const desc = document.createElement("h1");
+    const total = document.createElement("h1");
+    desc.innerHTML = `Para la compra de: $ ${compra}, tiene descuento del 25%:  $ ${descuento_25}`;
+    desc.setAttribute("style", "background-color:green;");
+    document.getElementById("descuento").appendChild(desc);
+    total.innerHTML = `Valor de la compra con descuento es: $ ${
+      compra - descuento_25
+    }`;
+    total.setAttribute("style", "background-color:green;");
+    document.getElementById("total").appendChild(total);
+  } else if (compra > 6560000 && compra <= 9840000) {
+    const desc = document.createElement("h1");
+    const total = document.createElement("h1");
+    desc.innerHTML = `Para la compra de: $ ${compra}, tiene descuento del 35%:  $ ${descuento_35}`;
+    desc.setAttribute("style", "background-color:green;");
+    document.getElementById("descuento").appendChild(desc);
+    total.innerHTML = `Valor de la compra con descuento es: $ 
+    ${compra - descuento_35}`;
     total.setAttribute("style", "background-color:green;");
     document.getElementById("total").appendChild(total);
   } else {
