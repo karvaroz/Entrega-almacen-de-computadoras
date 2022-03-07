@@ -6,7 +6,6 @@ btn.addEventListener("click", function () {
   let valor_con_descuento = 150000;
   let compra_total = compra - descuento_10;
 
-
   if (compra >= valor_con_descuento) {
     const desc = document.createElement("h1");
     const total = document.createElement("h1");
@@ -17,7 +16,6 @@ btn.addEventListener("click", function () {
     total.innerHTML = `Valor de la compra con descuento es: $ ${compra_total}`;
     total.setAttribute("style", "background-color:green;");
     document.getElementById("total").appendChild(total);
-
   } else {
     const result = document.createElement("h1");
     result.innerHTML = `El valor de tu compra no tiene descuento`;
