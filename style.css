@@ -1,0 +1,88 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(102, 98, 98);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 40%;
+}
+
+.wrapper {
+  background-color: transparent;
+  margin: auto;
+  margin-top: 50px;
+  width: 50%;
+  border: 3px;
+  border-radius: 10%;
+  padding: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+.money_input {
+  margin: auto;
+  margin-top: 30px;
+  width: 50%;
+  border: 3px solid grey;
+  padding: 10px;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #666;
+  color: white;
+  text-align: center;
+}
+
+.fa-laptop-code{
+  
+}
